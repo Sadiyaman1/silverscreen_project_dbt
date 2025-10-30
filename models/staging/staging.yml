@@ -1,0 +1,70 @@
+version: 2
+
+models:
+  # Staging Models
+  - name: stg_movie_catalogue
+    description: Cleaned and standardized movie catalogue data, including movie titles, release dates, genres (with NULLs replaced by 'Unknown'), and studios.
+    columns:
+      - name: movie_id
+        description: Unique identifier for each movie.
+        tests:
+          - not_null
+          - unique
+      - name: movie_title
+        description: Title of the movie.
+        tests:
+          - not_null
+      - name: release_date
+        description: Release date of the movie.
+      - name: genre
+        description: Genre category of the movie (NULLs replaced with 'Unknown').
+      - name: studio
+        description: Studio that produced the movie.
+
+  - name: stg_invoices
+    description: Cleaned and standardized invoice data, showing monthly rental costs for films per location.
+    columns:
+      - name: movie_id
+        description: Unique identifier for each movie.
+        tests:
+          - not_null
+      - name: month
+        description: Month of the invoice (truncated to the first day of the month).
+        tests:
+          - not_null
+      - name: location_id
+        description: Identifier for the cinema location.
+        tests:
+          - not_null
+      - name: weekly_rental_cost
+        description: The cost to rent the film for one week.
+      - name: total_rental_cost
+        description: The total cost to rent the movie for one month.
+
+  - name: stg_location_sales
+    description: Unified and standardized ticket sales data from all NJ locations (NJ_001, NJ_002, NJ_003), including monthly aggregated tickets sold and revenue.
+    columns:
+      - name: month
+        description: Month of ticket sales (truncated to the first day of the month).
+        tests:
+          - not_null
+      - name: movie_id
+        description: Unique identifier for each movie.
+        tests:
+          - not_null
+      - name: tickets_sold
+        description: The number of tickets sold for the movie in that month and location.
+        tests:
+          - not_null
+          - dbt_project.revenue_non_negative # Reusing the custom test for tickets_sold as well
+      - name: revenue
+        description: Total revenue generated from ticket sales for the movie in that month and location.
+        tests:
+          - not_null
+          - dbt_project.revenue_non_negative
+      - name: location_id
+        description: Identifier for the cinema location (NJ_001, NJ_002, or NJ_003).
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["NJ_001", "NJ_002", "NJ_003"]

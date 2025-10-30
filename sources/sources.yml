@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: silverscreen
+    database: silverscreen
+    schema: public
+    tables:
+      - name: movie_catalogue
+        description: Raw data for movie catalogue, including movie titles, release dates, genres, and studios.
+      - name: invoices
+        description: Raw invoice data detailing rental costs for movies by month and location.
+      - name: nj_001
+        description: Raw ticket sales data for location NJ_001, including timestamps, movie IDs, ticket amounts, and prices.
+      - name: nj_002
+        description: Raw ticket sales data for location NJ_002, including dates, movie IDs, ticket amounts, and prices.
+      - name: nj_003
+        description: Raw ticket sales data for location NJ_003, including timestamps, product details, amounts, and prices.
+
