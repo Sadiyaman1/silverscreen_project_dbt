@@ -87,7 +87,8 @@ sources → staging → intermediate → mart
 
 7. View documentation  
    ```bash 
-   dbt docs generate && dbt docs serve  
+   dbt docs generate
+   dbt docs serve  
 
 ---
 
