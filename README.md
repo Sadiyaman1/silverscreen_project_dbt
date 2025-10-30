@@ -71,9 +71,12 @@ sources → staging → intermediate → mart
 ---
 
 ## How to Run
-1. Clone this repository  
+## How to Run
+
+1. Clone this repository
+   ```bash
    git clone https://github.com/Sadiyaman1/silverscreen_project.git
-   cd silverscreen_project  
+   cd silverscreen_project 
 
 2. Install dependencies  
    dbt deps  
