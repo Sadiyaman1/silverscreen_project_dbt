@@ -67,5 +67,5 @@ models:
         tests:
           - not_null
           - accepted_values:
-            arguments:
-              values: ["NJ_001", "NJ_002", "NJ_003"]
+              arguments:
+                values: ["NJ_001", "NJ_002", "NJ_003"]
