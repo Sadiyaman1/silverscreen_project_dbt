@@ -1,0 +1,27 @@
+ # Intermediate Models
+models:  
+  - name: int_monthly_sales_by_location
+    description: Aggregated monthly ticket sales and revenue for each movie and location.
+    columns:
+      - name: month
+        description: Month of sales (truncated to the first day of the month).
+        tests:
+          - not_null
+      - name: movie_id
+        description: Unique identifier for each movie.
+        tests:
+          - not_null
+      - name: location_id
+        description: Identifier for the cinema location.
+        tests:
+          - not_null
+      - name: tickets_sold
+        description: Total number of tickets sold for the movie in that month and location.
+        tests:
+          - not_null
+          - revenue_non_negative
+      - name: revenue
+        description: Total revenue generated from ticket sales for the movie in that month and location.
+        tests:
+          - not_null
+          - revenue_non_negative

@@ -56,12 +56,12 @@ models:
         description: The number of tickets sold for the movie in that month and location.
         tests:
           - not_null
-          - dbt_project.revenue_non_negative # Reusing the custom test for tickets_sold as well
+          - revenue_non_negative # Reusing the custom test for tickets_sold as well
       - name: revenue
         description: Total revenue generated from ticket sales for the movie in that month and location.
         tests:
           - not_null
-          - dbt_project.revenue_non_negative
+          - revenue_non_negative
       - name: location_id
         description: Identifier for the cinema location (NJ_001, NJ_002, or NJ_003).
         tests:
