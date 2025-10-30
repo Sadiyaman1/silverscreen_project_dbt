@@ -74,7 +74,7 @@ sources → staging → intermediate → mart
 
 1. Clone this repository
    ```bash 
-   git clone https://github.com/Sadiyaman1/silverscreen_project.git
+   git clone https://github.com/Sadiyaman1/silverscreen_project_dbt.git
    cd silverscreen_project
    
 3. Install dependencies  
