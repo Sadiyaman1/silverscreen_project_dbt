@@ -17,6 +17,7 @@ It focuses on:
 ---
 
 ## Project Structure
+
 silverscreen_project/
 │
 ├── analyses/         # Ad-hoc queries and analysis
@@ -31,6 +32,7 @@ silverscreen_project/
 ├── tests/            # Custom data tests
 ├── dbt_project.yml   # Project configuration
 └── README.md         # Project documentation
+
 
 ---
 
