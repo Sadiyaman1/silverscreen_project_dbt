@@ -72,7 +72,7 @@ sources → staging → intermediate → mart
 
 ## How to Run
 1. Clone this repository  
-   git clone https://github.com/your-username/silverscreen_project.git  
+   git clone https://github.com/Sadiyaman1/silverscreen_project.git
    cd silverscreen_project  
 
 2. Install dependencies  
