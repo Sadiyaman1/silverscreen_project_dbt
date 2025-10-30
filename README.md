@@ -71,19 +71,22 @@ sources → staging → intermediate → mart
 ---
 
 ## How to Run
-## How to Run
 
 1. Clone this repository
+   ```bash 
    git clone https://github.com/Sadiyaman1/silverscreen_project.git
    cd silverscreen_project
    
 3. Install dependencies  
+   ```bash 
    dbt deps  
 
-4. Run models  
+5. Run models  
+   ```bash 
    dbt build  
 
-5. View documentation  
+7. View documentation  
+   ```bash 
    dbt docs generate && dbt docs serve  
 
 ---
