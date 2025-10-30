@@ -20,18 +20,18 @@ It focuses on:
 
 silverscreen_project/
 │
-├── analyses/         # Ad-hoc queries and analysis
-├── macros/           # Custom dbt macros (e.g. tests)
-├── models/           # Core models
-│   ├── staging/      # Source cleaning & standardization
-│   ├── intermediate/ # Aggregations & business logic
-│   └── mart/         # Final business-ready tables
-├── seeds/            # Static reference data
-├── snapshots/        # Historical snapshots
-├── sources/          # Source definitions
-├── tests/            # Custom data tests
-├── dbt_project.yml   # Project configuration
-└── README.md         # Project documentation
+├── analyses/ # Ad-hoc queries and analysis
+├── macros/ # Custom dbt macros (e.g. tests)
+├── models/ # Core models
+│ ├── staging/ # Source cleaning & standardization
+│ ├── intermediate/ # Aggregations & business logic
+│ └── mart/ # Final business-ready tables
+├── seeds/ # Static reference data
+├── snapshots/ # Historical snapshots
+├── sources/ # Source definitions
+├── tests/ # Custom data tests
+├── dbt_project.yml # Project configuration
+└── README.md # Project documentation
 
 
 ---
