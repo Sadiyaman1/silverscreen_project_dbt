@@ -79,7 +79,7 @@ sources → staging → intermediate → mart
 1. Clone this repository
    ```bash 
    git clone https://github.com/Sadiyaman1/silverscreen_project_dbt.git
-   cd silverscreen_project
+   cd silverscreen_project_dbt
    
 3. Install dependencies  
    ```bash 
