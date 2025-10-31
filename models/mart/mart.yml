@@ -24,7 +24,8 @@ models:
         description: Genre category of the movie.
         tests:
           - accepted_values:
-              values: ["Animation", "Action", "Comedy", "Horror", "Unknown", "Thriller", "Fantasy", "Sci-Fi", "Drama"]
+              arguments:
+                values: ["Animation", "Action", "Comedy", "Horror", "Unknown", "Thriller", "Fantasy", "Sci-Fi", "Drama"]
 
       - name: studio
         description: Studio that produced the movie.
