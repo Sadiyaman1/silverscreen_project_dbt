@@ -18,20 +18,24 @@ It focuses on:
 
 ## Project Structure
 ```
-silverscreen_project/
+ilverscreen_project/
 │
-├── analyses/ # Ad-hoc queries and analysis
-├── macros/ # Custom dbt macros (e.g. tests)
-├── models/ # Core models
-│ ├── staging/ # Source cleaning & standardization
-│ ├── intermediate/ # Aggregations & business logic
-│ └── mart/ # Final business-ready tables
-├── seeds/ # Static reference data
-├── snapshots/ # Historical snapshots
-├── sources/ # Source definitions
-├── tests/ # Custom data tests
-├── dbt_project.yml # Project configuration
-└── README.md # Project documentation
+├── analyses/ # Ad-hoc queries and exploratory analysis
+├── docs/ # Project overview and documentation
+├── macros/ # Custom dbt macros and reusable logic
+├── models/ # Core data models (staging, intermediate, mart)
+├── seeds/ # Static reference data files
+├── snapshots/ # Historical snapshot definitions
+├── sources/ # Source definitions and configurations
+├── tests/ # Custom data quality tests
+│
+├── .gitignore # Files and folders ignored by Git
+├── LICENSE # Project license (MIT)
+├── dbt_project.yml # Main dbt project configuration file
+├── packages.yml # dbt package dependencies
+├── package-lock.yml # Dependency lock file
+└── README.md # Project documentation and usage guide
+
 ```
 
 ---
