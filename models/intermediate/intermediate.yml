@@ -8,7 +8,7 @@ models:
         tests:
           - not_null
       - name: movie_id
-        description: Unique identifier for each movie.
+        description: Identifier for each movie.
         tests:
           - not_null
       - name: location_id
@@ -25,3 +25,33 @@ models:
         tests:
           - not_null
           - revenue_non_negative
+  
+  - name: int_invoices
+    description: Aggregated weekly and total rental costs per movie and location, truncated to the first day of each month.
+    columns:
+      - name: month
+        description: Month of the rental (first day of the month).
+        tests:
+          - not_null
+
+      - name: movie_id
+        description: Identifier for each movie.
+        tests:
+          - not_null
+
+      - name: location_id
+        description: Identifier for the rental location.
+        tests:
+          - not_null
+
+      - name: weekly_rental_cost
+        description: Total rental cost per week for the movie and location.
+        tests:
+          - not_null
+          - rental_cost_non_negative
+
+      - name: total_rental_cost
+        description: Total accumulated rental cost for the movie and location.
+        tests:
+          - not_null
+          - rental_cost_non_negative        
